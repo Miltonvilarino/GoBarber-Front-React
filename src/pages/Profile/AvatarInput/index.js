@@ -5,12 +5,9 @@ import { Container } from './styles';
 
 export default function AvatarInput() {
   const { defaultValue, registerField } = useField('avatar');
-
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
-
   const ref = useRef();
-
   useEffect(() => {
     if (ref.current) {
       registerField({

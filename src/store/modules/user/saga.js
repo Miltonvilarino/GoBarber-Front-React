@@ -25,13 +25,4 @@ export function* updateProfile({ payload }) {
   }
 }
 
-export function* setToken({ payload }) {
-  if (!payload) return;
-  const { token } = payload.auth;
-
-  if (token) {
-    yield (api.defaults.headers.Authorization = `Bearer ${token}`);
-  }
-}
-
 export default all([takeLatest('@user/UPDATE_PROFILE_REQUEST', updateProfile)]);
