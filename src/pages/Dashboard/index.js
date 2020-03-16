@@ -45,9 +45,6 @@ export default function Dashboard() {
       });
       setSchedule(data);
     }
-    
-    console.tron.log(schedule);
-
     loadSchedule();
   }, [date]);
 
